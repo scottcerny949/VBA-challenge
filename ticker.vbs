@@ -21,7 +21,6 @@ ws.Cells(1, 12).Value = "Total Stock Volume"
 
     
 lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
-'lastrow = 500
 
 table_row = 2
 
@@ -37,6 +36,7 @@ For I = 2 To lastrow
         ws.Cells(table_row, 12).Value = vol_total
     
         ' Cells(i,6).value should be the value for closing price at end of year for the stock
+
         last_close = ws.Cells(I, 6).Value
     
         'must use the first_open now before it moves to the next ticker symbol
@@ -91,7 +91,6 @@ For I = 2 To lastrow
     End If
 
 Next I
-    
     
 'BONUS SECTION
  
